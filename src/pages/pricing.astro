@@ -1,0 +1,33 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Pricing from "@components/pricing.astro";
+
+const pricing = [
+  {
+    name: "Personal",
+    price: "Free",
+    popular: false,
+    features: ["Lifetime free", "Subject to Change"],
+    button: {
+      text: "Get Started",
+      link: "/",
+    },
+  },
+];
+---
+
+<Layout title="Pricing">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Pricing</Fragment>
+      <Fragment slot="desc"></Fragment>
+      Simple & Predictable pricing. No Surprises.
+    </Sectionhead>
+  </Container>
+
+  <div class="grid md:grid-cols-1 gap-10 mx-auto max-w-screen-lg mt-12">
+    {pricing.map((item) => <Pricing plan={item} />)}
+  </div>
+</Layout>
