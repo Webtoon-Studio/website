@@ -4,13 +4,13 @@ import { Icon } from "astro-icon";
 
 const features = [
   {
-    title: "Easy to Use",
+    title: "Views",
     description:
       "We show up right on the webtoon dashboard, so no need for an external or anything once you have our extension installed",
     icon: "bx:bxs-briefcase",
   },
   {
-    title: "Views &",
+    title: "Engagement",
     description:
       "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
     icon: "bx:bxs-window-alt",
@@ -42,11 +42,11 @@ const features = [
 ];
 ---
 
-<div class="mt-16 md:mt-0">
+<div class="mt-16 md:mt-0 text-ws-grey-light">
   <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
     We track everything you ever imagined
   </h2>
-  <p class="text-lg mt-4 text-slate-600">
+  <p class="text-lg mt-4">
     And some you didn't, focus on making your comics and let Creator Studio
     handle the rest
   </p>
@@ -55,13 +55,13 @@ const features = [
 <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
   {
     features.map((item) => (
-      <div class="flex gap-4 items-start">
+      <div class="flex gap-4 items-start text-ws-grey-light">
         <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
-          <Icon class="text-white" name={item.icon} />
+          <Icon class="" name={item.icon} />
         </div>
         <div>
           <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
-          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+          <p class=" mt-2 leading-relaxed">{item.description}</p>
         </div>
       </div>
     ))
