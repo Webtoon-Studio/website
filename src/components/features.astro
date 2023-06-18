@@ -4,60 +4,61 @@ import { Icon } from "astro-icon";
 
 const features = [
   {
-    title: "Views",
+    title: "Easy Integration",
     description:
-      "We show up right on the webtoon dashboard, so no need for an external or anything once you have our extension installed",
+      "We show up right on the webtoon dashboard, so no need to add another website to your bookmarks tab",
     icon: "bx:bxs-briefcase",
+    accent: "text-ws-green",
   },
   {
-    title: "Engagement",
+    title: "Clearly Communicated",
     description:
-      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
+      "Data is displayed in simple visually accessible formats, No guesswork required",
     icon: "bx:bxs-window-alt",
+    accent: "text-ws-blue",
   },
   {
-    title: "On-Demand Components",
+    title: "Track Reader Engagement",
     description:
-      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.  ",
+      "Know what your readers are saying about your webtoon, when they're typically reading and ",
     icon: "bx:bxs-data",
+    accent: "text-ws-magenta",
   },
   {
-    title: "Broad Integration",
+    title: "Long Term Data Tracking",
     description:
-      "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any other npm packages.",
+      "We keep track of your data over time, so you can see how your webtoon is growing.",
     icon: "bx:bxs-bot",
+    accent: "text-ws-yellow",
   },
   {
-    title: "SEO Enabled",
+    title: "Data Safe",
     description:
-      "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication. It just works!",
+      "We sell none of your comic data to third parties. It's yours and yours alone.",
     icon: "bx:bxs-file-find",
+    accent: "text-ws-magenta-light",
   },
   {
-    title: "Community",
+    title: "Dedicated Support",
     description:
-      "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
+      "We have multiple social platforms for outreach including discord and twitter, along with an easy to use report system built into the extension",
     icon: "bx:bxs-user",
+    accent: "text-ws-blue-light",
   },
 ];
 ---
 
 <div class="mt-16 md:mt-0 text-ws-grey-light">
-  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    We track everything you ever imagined
-  </h2>
-  <p class="text-lg mt-4">
-    And some you didn't, focus on making your comics and let Creator Studio
-    handle the rest
-  </p>
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">Features</h2>
+  <p class="text-lg mt-4"></p>
 </div>
 
 <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
   {
     features.map((item) => (
       <div class="flex gap-4 items-start text-ws-grey-light">
-        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
-          <Icon class="" name={item.icon} />
+        <div class="mt-1 text-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <Icon class={item.accent} name={item.icon} />
         </div>
         <div>
           <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
