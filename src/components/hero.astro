@@ -3,19 +3,38 @@ import { Picture } from "@astrojs/image/components";
 import heroImage from "assets/hero.png";
 import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon";
-
-const colours = [
-  "text-ws-green-light",
-  "text-ws-magenta-light",
-  "text-ws-blue-light",
-  "text-ws-yellow-light",
-  "text-ws-green",
-  "text-ws-magenta",
-  "text-ws-blue",
-];
-const randomColour =
-  "font-bold " + colours[Math.floor(Math.random() * colours.length)];
 ---
+
+<script>
+  const colours = [
+    "text-ws-green-light",
+    "text-ws-magenta-light",
+    "text-ws-blue-light",
+    "text-ws-yellow-light",
+    "text-ws-green",
+    "text-ws-magenta",
+    "text-ws-blue",
+  ];
+
+  const defaultColour = colours[0];
+
+  document.querySelectorAll("span.randomColour").forEach((el) => {
+    el.classList.add(defaultColour);
+    el.classList.add("font-bold");
+  });
+
+  document.querySelectorAll("span.randomColour").forEach((el) => {
+    el.addEventListener("mouseover", colourRandomiser);
+  });
+
+  function colourRandomiser() {
+    const randomColour = colours[Math.floor(Math.random() * colours.length)];
+    document.querySelectorAll("span.randomColour").forEach((el) => {
+      el.className = "randomColour font-bold " + randomColour;
+    });
+  }
+  //assign random colour to elements in html with id randomColour
+</script>
 
 <!-- Say goodbye to spreadsheets and hello to your future data management tool for
 Webtoon creators. -->
@@ -34,11 +53,11 @@ Webtoon creators. -->
   </div>
   <div>
     <span
-      class="text-white text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
-      Say Goodbye to <span class={randomColour}>Spreadsheets</span>
+      class="select-none text-white text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
+      Say Goodbye to <span class="randomColour">Spreadsheets</span>
     </span>
-    <p class="text-lg mt-4 text-ws-grey-light max-w-xl">
-      Creator Studio is a <span class={randomColour}>browser extension</span> that
+    <p class="select-none text-lg mt-4 text-ws-grey-light max-w-xl">
+      Creator Studio is a <span class="randomColour">browser extension</span> that
       handles all the work for you, Our new data analytics tool for webtoon allows
       you to set yourself up for success.<wbr /> You'll spend less time logging and
       more time maximising the value of your comics potential to grow.
