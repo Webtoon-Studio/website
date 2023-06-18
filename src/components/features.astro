@@ -7,35 +7,35 @@ const features = [
     title: "Easy Integration",
     description:
       "We show up right on the webtoon dashboard, so no need to add another website to your bookmarks tab",
-    icon: "bx:bxs-briefcase",
+    icon: "ic:round-dashboard",
     accent: "text-ws-green-light",
   },
   {
     title: "Clearly Communicated",
     description:
       "Data is displayed in simple visually accessible formats, No guesswork required",
-    icon: "bx:bxs-window-alt",
+    icon: "bi:lightbulb-fill",
     accent: "text-ws-blue",
   },
   {
     title: "Track Reader Engagement",
     description:
       "Know what your readers are saying about your webtoon, when they're typically reading and ",
-    icon: "bx:bxs-data",
+    icon: "fa-solid:book-reader",
     accent: "text-ws-magenta",
   },
   {
     title: "Long Term Data Tracking",
     description:
       "We keep track of your data over time, so you can see how your webtoon is growing.",
-    icon: "bx:bxs-bot",
-    accent: "text-ws-yellow-light",
+    icon: "uis:graph-bar",
+    accent: "text-ws-yellow-light text-4xl",
   },
   {
-    title: "Data Safe",
+    title: "Safe and Secure",
     description:
       "We sell none of your comic data to third parties. It's yours and yours alone.",
-    icon: "bx:bxs-file-find",
+    icon: "ri:git-repository-private-fill",
     accent: "text-ws-magenta-light",
   },
   {
@@ -58,7 +58,7 @@ const features = [
     features.map((item) => (
       <div class="flex gap-4 items-start text-ws-grey-light">
         <div class="mt-1 text-black rounded-full  p-2 w-8 h-8 shrink-0">
-          <Icon class={item.accent} name={item.icon} />
+          <Icon class={item.accent} name={item.icon} size={27} />
         </div>
         <div>
           <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
