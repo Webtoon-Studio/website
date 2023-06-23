@@ -21,7 +21,7 @@ module.exports = {
         "ws-yellow-dark": "#5f4300",
         "ws-yellow-light": "#f8dc99",
         //
-        "ws-black": "#090909",
+        "ws-black": "#1a1a1a",
         "ws-grey": "#9c9c9c",
         "ws-grey-dark": "#2f2f2f",
         "ws-grey-light": "#d4d4d4",
