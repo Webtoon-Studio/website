@@ -6,42 +6,42 @@ const features = [
   {
     title: "Easy Integration",
     description:
-      "We show up right on the webtoon dashboard, so no need to add another website to your bookmarks tab",
+      "Visualizations show up right on the Webtoon dashboard, so no need to add another website to your bookmarks tab.",
     icon: "ic:round-dashboard",
     accent: "text-ws-green-light",
   },
   {
     title: "Clearly Communicated",
     description:
-      "Data is displayed in simple visually accessible formats, No guesswork required",
+      "Data is displayed in simple, visually accessible formats. No guesswork required to interpret your data.",
     icon: "bi:lightbulb-fill",
     accent: "text-ws-blue",
   },
   {
     title: "Track Reader Engagement",
     description:
-      "Know what your readers are saying about your webtoon, when they're typically reading and ",
+      "Know what your readers are saying about your webtoon and when they're typically reading. From the controversial to the loved, see what episodes perform the best.",
     icon: "fa-solid:book-reader",
     accent: "text-ws-magenta",
   },
   {
     title: "Long Term Data Tracking",
     description:
-      "We keep track of your data over time, so you can see how your webtoon is growing.",
+      "No need to waste time manually tracking data. We keep track of it for you, automatically, so you so you can focus on being an artist.",
     icon: "uis:graph-bar",
     accent: "text-ws-yellow-light text-4xl",
   },
   {
-    title: "Safe and Secure",
+    title: "Private and Secure",
     description:
-      "We sell none of your comic data to third parties. It's yours and yours alone.",
+      "We know your stories data is personal. We sell none of your comic data to third parties. It's yours and yours alone.",
     icon: "ri:git-repository-private-fill",
     accent: "text-ws-magenta-light",
   },
   {
     title: "Dedicated Support",
     description:
-      "We have multiple social platforms for outreach including discord and twitter, along with an easy to use report system built into the extension",
+      "We have multiple social platforms for outreach, including discord and twitter, along with an easy to use report system built into the extension.",
     icon: "bx:bxs-user",
     accent: "text-ws-blue-light",
   },
@@ -50,14 +50,17 @@ const features = [
 
 <div class="mt-16 md:mt-0 text-ws-grey-light">
   <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">Features</h2>
-  <p class="text-lg mt-4"></p>
+  <p class="text-lg mt-4">
+    Offering both high and low level views of your stories performance. We are
+    always experimenting with new ways to interpret the data.
+  </p>
 </div>
 
 <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
   {
     features.map((item) => (
       <div class="flex gap-4 items-start text-ws-grey-light">
-        <div class="mt-1 text-black rounded-full  p-2 w-8 h-8 shrink-0">
+        <div class="mt-1 rounded-full bg-neutral-800 p-3 shadow-lg">
           <Icon class={item.accent} name={item.icon} size={27} />
         </div>
         <div>
