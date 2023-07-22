@@ -1,7 +1,7 @@
 ---
 draft: false
 name: "Rolo"
-title: "Backend Enginner & Exhausted"
+title: "Backend Enginner | Exhausted"
 avatar: {
     src: "https://unavatar.io/github/roloedits",
     alt: "Rolo - Exhausted Dev"

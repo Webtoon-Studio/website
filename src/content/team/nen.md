@@ -1,7 +1,7 @@
 ---
 draft: false
 name: "Nen"
-title: "Business Manager & Day-drinker"
+title: "Project Manager | Day-drinking"
 avatar: {
     src: "https://unavatar.io/github/spacemannfinn",
     alt: "Nen - Alcoholic"
