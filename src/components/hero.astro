@@ -1,6 +1,6 @@
 ---
 import { Picture } from "@astrojs/image/components";
-import heroImage from "assets/hero.png";
+import heroImage from "assets/hero-1.png";
 import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon";
 ---
@@ -43,9 +43,9 @@ Webtoon creators. -->
   <div class="py-5 md:order-1 hidden md:block">
     <Picture
       src={heroImage}
-      alt="Astronaut in the air"
+      alt="Depressed Artist being yelled at by Spreadsheet"
       widths={[200, 400, 600]}
-      aspectRatio="4:3"
+      aspect={1.22641509434}
       sizes="(max-width: 800px) 100vw, 620px"
       loading="eager"
       format="avif"
@@ -59,10 +59,10 @@ Webtoon creators. -->
     </span>
     <p class="select-none text-lg mt-4 text-ws-grey-light max-w-xl">
       <!-- <span class="randomColour"> </span>-->
-      Creator Studio is a <span class="randomColour">browser extension</span> that handles all the work for you. Our
-      new data analytics tool for Webtoons allows you to set yourself up for success.
-      You'll spend less time logging and more time maximising the value of your comics
-      potential to grow.
+      Creator Studio is a <span class="randomColour">browser extension</span> that
+      handles all the work for you. Our new data analytics tool for Webtoons allows
+      you to set yourself up for success. You'll spend less time logging and more
+      time maximising the value of your comics potential to grow.
     </p>
     <div class="mt-6 flex flex-col sm:flex-row gap-3">
       <Link
