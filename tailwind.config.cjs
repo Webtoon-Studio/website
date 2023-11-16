@@ -27,6 +27,6 @@ module.exports = {
         "ws-grey-light": "#d4d4d4",
       },
     },
-    plugins: [require("@tailwindcss/typography")],
+    plugins: [require("@tailwindcss/typography"), require("@tailwindcss/nesting")],
   }
 }
