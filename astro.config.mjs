@@ -14,6 +14,11 @@ export default defineConfig({
     mdx(),
     sitemap(),
   ],
+  markdown: {
+    remarkPlugins: [],
+    //
+    extendDefaultPlugins: true,
+  },
   experimental: {
     assets: true,
   },

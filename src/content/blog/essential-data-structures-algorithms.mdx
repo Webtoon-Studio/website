@@ -1,0 +1,43 @@
+---
+draft: false
+title: "Patch 0.5.2 Note"
+snippet: "Ornare cum cursus laoreet sagittis nunc fusce posuere per euismod dis vehicula a, semper fames lacus maecenas dictumst pulvinar neque enim non potenti. Torquent hac sociosqu eleifend potenti."
+image: {
+    src: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?&fit=crop&w=430&h=240",
+    alt: "frontend master"
+}
+publishDate: "2022-11-09 16:39"
+category: "Courses"
+author: "Marcell Ziemann"
+tags: [webdev, tailwindcss, frontend]
+---
+import Blockquote from "@components/blockquote.astro";
+import OrderedList from "@components/orderedlist.astro";
+import UnorderedList from "@components/unorderedlist.astro";
+export const components = {blockquote: Blockquote, ol: OrderedList, ul: UnorderedList}
+
+
+
+> A blockquote with *some* emphasis.
+
+1. Cake
+    * Donuts
+
+# Special thanks to @rolo for working tirelessly on major updates to the backend database & API
+
+*This patch mostly fixed API calls per the recent changes to the backend. However there are few major changes:*
+
+**Report function is finally available!**
+```
+You can now report any bug or feedback to us using the Report button on the extension's popup!
+```
+
+``European date format``
+`Apologies` for forcing my American ways to you European users. I've added a setting to change the date formats to European (dd/mm/yyyy).
+However, most dates on the graphs seem to default to American format regardless. I am aware of this, and currently working on this.
+
+Changes to the Information sections
+There was a small confusion from the patch 0.5.0 regarding the This Month/This Year vs Published This Month/Published This Year. We now have Total (Views/Likes/Comments) This Month/Year which is time-accurate metric measured from our data (instead of the episode data).
+Similarly, Average information boxes are also updated to be based on the data collected over time instead of per episode.
+
+Lastly, we have removed the following features: Average Episode Length box & First-Time Commenters graph. They are not completely gone but are removed for the time being.
