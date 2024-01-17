@@ -2,7 +2,6 @@
 import { getCollection } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
-import Prose from "@components/Prose.astro";
 
 // Generate a new path for every collection entry
 export async function getStaticPaths() {
@@ -16,8 +15,6 @@ export async function getStaticPaths() {
 // Get the entry directly from the prop on render
 const { entry } = Astro.props;
 const { Content } = await entry.render();
-
-console.log(entry);
 ---
 
 <Layout title={entry.data.title}>
@@ -40,7 +37,8 @@ console.log(entry);
         </time>
       </div>
     </div>
-    <div class="text-ws-grey-light mx-auto prose prose-lg mt-6 max-w-3xl">
+    <div
+      class="text-ws-grey-light mx-auto prose prose-h1:text-ws-grey-light prose-blockquote:text-ws-grey-light prose-blockquote:p-4 prose-blockquote:my-4 prose-blockquote:border-s-4 prose-blockquote:border-ws-grey-300 prose-blockquote:bg-ws-black prose-lg mt-6 max-w-3xl">
       <Content />
     </div>
     <div class="text-center mt-8">

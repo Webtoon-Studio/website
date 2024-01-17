@@ -1,7 +1,45 @@
 ---
-const { children, ...props } = Astro.props;
+const { ...props } = Astro.props;
 ---
 
-<ol {...props}>
-  {children}
-</ol>
+<div {..props}>
+  <slot />
+</div>
+
+<style>
+  /* Base styles for all lists */
+  ul,
+  ol {
+    list-style-type: none; /* Removes default list styling */
+    padding-left: 0; /* Removes default padding */
+  }
+
+  /* Unordered list styles */
+  ul li > ul,
+  ul li > ol {
+    margin-left: 1em;
+    list-style-type: circle; /* Style for first level of nested lists in UL */
+  }
+
+  ul li > ul li > ul,
+  ul li > ul li > ol {
+    list-style-type: square; /* Style for deeper levels in UL */
+  }
+
+  /* Ordered list styles */
+  ol li > ul,
+  ol li > ol {
+    margin-left: 1em;
+    list-style-type: lower-alpha; /* Style for first level of nested lists in OL */
+  }
+
+  ol li > ol li > ul,
+  ol li > ol li > ol {
+    list-style-type: lower-roman; /* Style for deeper levels in OL */
+  }
+
+  /* List item styles */
+  li {
+    margin-bottom: 0.3em;
+  }
+</style>
