@@ -1,0 +1,56 @@
+---
+draft: false
+title: "Patch 0.4.5 Note"
+snippet: "Major design changes for: Dashboard, Popup, and Others"
+
+publishDate: "2023-09-30 14:57"
+author: "Kyo"
+---
+1. New Scroll-To-Top Button
+	1. New Keyboard Shortcuts
+2. Dashboard can now be navigated through following keyboard shortcuts:\
+	or k: Next Slide\
+	or j: Previous Slide\
+  Ctrl+: Scroll to the top\
+  Ctrl+: Scroll to the bottom\
+  With the implementation of the keyboard shortcuts, the previous method of navigating the dashboard is removed.
+
+* Tooltips & Descriptions
+* Tooltips and descriptions are added to certain graphs to help users with informations regarding the graph.
+
+
+## 2. Design Changes
+
+* More Summary Info Boxes
+* More information is added regarding days between episodes (e.g. Average, Usual (most frequent), and Longest (maximum)).
+* New information regarding average episode length in pixel.
+* Most frequent update weekday information is removed (it instead has its own section).
+* Changes to Graphs
+* Many new graph types are added, such as: Indicator graph for subscribers, Timeseries stats graphs, average per weekday graphs, monthly & yearly trend graphs, commonly used words graph, and first comment graph.
+* Violin graphs are removed. Instead, info boxes are added to show interesting data analysis.
+* Performance graphs no longer have filter buttons to limit the data points shown. Instead, range sliders are added to allow changing the range of data shown.
+
+3. Popup Design Change
+
+* Popup Title
+* The title can be used to redirect to our website.
+* Popup User Guide Button
+* The user guide is now accessible from the popup.
+
+4. Others
+
+* Code Optimization
+* Fetch requests are now made from a service worker.
+* Data is now preloaded at a regular interval.
+
+## Work In Progress
+
+* New Graph
+  * Timeseries graph for individual episodes
+* Popup Design Change
+  * UI design change for webtoon list (per Magikfire's feedback)
+* Graph Design Change
+  * Better way to filter data point to view specific areas of a graph
+  * First time comment graph design upgrade
+* Episode List
+  * Inject script into episode list to show more stats
