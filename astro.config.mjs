@@ -4,6 +4,7 @@ import image from "@astrojs/image";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 
+
 export default defineConfig({
   site: "https://webtoons.studio",
   integrations: [
