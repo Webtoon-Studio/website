@@ -79,20 +79,6 @@ const makeTitle = title
           }
         }
       }
-      ol {
-        counter-reset: item;
-      }
-      li {
-        list-style-type: disc;
-        list-style-position: inside;
-        display: block;
-        text-indent: -1em;
-        padding-left: 1em;
-      }
-      li:before {
-        content: counters(item, ".") " ";
-        counter-increment: item;
-      }
     </style>
   </body>
 </html>
