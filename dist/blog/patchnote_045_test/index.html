@@ -7,11 +7,11 @@
     <meta name="generator" content="Astro v2.6.3">
 
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
-    <title>Blog | Creator Studio for Webtoon</title>
+    <title>Patch 0.4.5 Note | Creator Studio for Webtoon</title>
 
 
 
-<link rel="canonical" href="https://webtoons.studio/blog/">
+<link rel="canonical" href="https://webtoons.studio/blog/patchnote_045_test/">
 
 <meta name="description" content="Creator Studio is a data analytics tool for Webtoon Creators to help them grow their audience and monetize their content.">
 
@@ -20,7 +20,7 @@
 <meta property="og:title" content="Creator Studio for Webtoon - Data Analytics tool for Webtoon Creators">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://webtoons.studio/opengraph.jpg">
-<meta property="og:url" content="https://webtoons.studio/blog/">
+<meta property="og:url" content="https://webtoons.studio/blog/patchnote_045_test/">
 
 <meta property="og:image:url" content="https://webtoons.studio/opengraph.jpg">
 
@@ -38,7 +38,8 @@
 <meta name="twitter:creator" content="@webcomics_hub">
 
 
-  <link rel="stylesheet" href="/_astro/404.9b5dc412.css" /><script type="module" src="/_astro/hoisted.68c79959.js"></script></head>
+  <link rel="stylesheet" href="/_astro/404.c1302122.css" />
+<link rel="stylesheet" href="/_astro/_slug_.3f443999.css" /><script type="module" src="/_astro/hoisted.68c79959.js"></script></head>
   <body class="bg-ws-black">
     <div class="max-w-screen-xl mx-auto px-5">
   
@@ -75,6 +76,10 @@
     
         <ul class="flex flex-col lg:flex-row lg:gap-3">
           <li>
+                    <a href="/patchnotes" class="flex lg:px-3 py-2 text-ws-grey-light hover:text-ws-grey-dark">
+                      Patch Notes
+                    </a>
+                  </li><li>
                     <a href="/contact" class="flex lg:px-3 py-2 text-ws-grey-light hover:text-ws-grey-dark">
                       Contact
                     </a>
@@ -94,30 +99,105 @@
 
 </div>
     
-  <div class="max-w-screen-xl mx-auto px-5">
+  <div class="max-w-screen-xl mx-auto px-5 astro-4SN4ZG3R">
   
-    <div class="mt-16 text-center">
-  <h1 class="text-4xl lg:text-5xl font-bold lg:tracking-tight text-ws-grey-light">
-    Roundups
-  </h1>
-  <p class="text-lg mt-4 text-ws-grey">
-    Posts about the end of the world.
-  </p>
-</div>
-    <main class="mt-16">
-      <ul class="grid gap-16 max-w-4xl mx-auto">
-        
-      </ul>
-    </main>
+    <div class="mx-auto max-w-3xl mt-14 astro-4SN4ZG3R">
+      <h1 class="text-center text-ws-grey text-4xl lg:text-5xl font-bold lg:tracking-tight mt-1 lg:leading-tight astro-4SN4ZG3R">
+        Patch 0.4.5 Note
+      </h1>
+      <div class="justify-center flex gap-2 mt-3 items-center flex-wrap md:flex-nowrap astro-4SN4ZG3R">
+        <span class="text-gray-400 astro-4SN4ZG3R">
+          Kyo
+        </span>
+        <span class="text-gray-400 astro-4SN4ZG3R">•</span>
+        <time class="text-gray-400 astro-4SN4ZG3R" datetime="2023-09-30T13:57:00.000Z">
+          Sat Sep 30 2023
+        </time>
+      </div>
+    </div>
+    <div class="leading-tight text-ws-grey-light mx-auto prose prose-h1:text-ws-grey-light prose-h2:text-ws-grey-light prose-h3:text-ws-grey-light prose-blockquote:text-ws-grey-light prose-blockquote:p-4 prose-blockquote:my-4 prose-blockquote:border-s-4 prose-blockquote:border-ws-grey-300 prose-blockquote:bg-ws-black prose-pre:max-w-2xl prose-lg mt-6 max-w-3xl astro-4SN4ZG3R">
+      <ol>
+<li>New Scroll-To-Top Button
+<ol>
+<li>New Keyboard Shortcuts</li>
+</ol>
+</li>
+<li>Dashboard can now be navigated through following keyboard shortcuts:<br/>
+or k: Next Slide<br/>
+or j: Previous Slide<br/>
+Ctrl+: Scroll to the top<br/>
+Ctrl+: Scroll to the bottom<br/>
+With the implementation of the keyboard shortcuts, the previous method of navigating the dashboard is removed.</li>
+</ol>
+<ul>
+<li>Tooltips &amp; Descriptions</li>
+<li>Tooltips and descriptions are added to certain graphs to help users with informations regarding the graph.</li>
+</ul>
+<h2 id="2-design-changes">2. Design Changes</h2>
+<ul>
+<li>More Summary Info Boxes</li>
+<li>More information is added regarding days between episodes (e.g. Average, Usual (most frequent), and Longest (maximum)).</li>
+<li>New information regarding average episode length in pixel.</li>
+<li>Most frequent update weekday information is removed (it instead has its own section).</li>
+<li>Changes to Graphs</li>
+<li>Many new graph types are added, such as: Indicator graph for subscribers, Timeseries stats graphs, average per weekday graphs, monthly &amp; yearly trend graphs, commonly used words graph, and first comment graph.</li>
+<li>Violin graphs are removed. Instead, info boxes are added to show interesting data analysis.</li>
+<li>Performance graphs no longer have filter buttons to limit the data points shown. Instead, range sliders are added to allow changing the range of data shown.</li>
+</ul>
+<ol start="3">
+<li>Popup Design Change</li>
+</ol>
+<ul>
+<li>Popup Title</li>
+<li>The title can be used to redirect to our website.</li>
+<li>Popup User Guide Button</li>
+<li>The user guide is now accessible from the popup.</li>
+</ul>
+<ol start="4">
+<li>Others</li>
+</ol>
+<ul>
+<li>Code Optimization</li>
+<li>Fetch requests are now made from a service worker.</li>
+<li>Data is now preloaded at a regular interval.</li>
+</ul>
+<h2 id="work-in-progress">Work In Progress</h2>
+<ul>
+<li>New Graph
+<ul>
+<li>Timeseries graph for individual episodes</li>
+</ul>
+</li>
+<li>Popup Design Change
+<ul>
+<li>UI design change for webtoon list (per Magikfire’s feedback)</li>
+</ul>
+</li>
+<li>Graph Design Change
+<ul>
+<li>Better way to filter data point to view specific areas of a graph</li>
+<li>First time comment graph design upgrade</li>
+</ul>
+</li>
+<li>Episode List
+<ul>
+<li>Inject script into episode list to show more stats</li>
+</ul>
+</li>
+</ul>
+    </div>
+    <div class="text-center mt-8 astro-4SN4ZG3R">
+      <a href="/patchnotes" class="bg-gray-100 px-5 py-3 rounded-md hover:bg-gray-200 transition astro-4SN4ZG3R">← Back to Blog</a>
+    </div>
   
 </div>
 
     <footer class="my-20">
   <p class="text-center text-sm text-slate-500">
-    Copyright © 2023 Creator Studio for Webtoon. All rights
+    Copyright © 2024 Creator Studio for Webtoon. All rights
     reserved.
   </p>
-  <p class="text-center text-xs text-slate-500 mt-1">Webtoon and</p>
+  <p class="text-center text-xs text-slate-500 mt-1">Powered By Spite</p>
 </footer>
     
   </body>
