@@ -10,7 +10,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-
+.prettierrc
 
 # environment variables
 .env
@@ -18,3 +18,5 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+.vscode/
