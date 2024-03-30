@@ -1,0 +1,31 @@
+---
+draft: true
+slug: "patch_0_6_0_Note"
+title: "Patch 0.6.0 Note"
+snippet: "Redesigning the Popup"
+
+publishDate: "2024-03-31 10:00"
+author: "Kyo"
+---
+
+## Major Changes to the Dashboard
+
+For a while, I've been working on implementing React framework into the extension. 
+The first step was overhauling the popup, which was implemented in the last patch.
+Without any big issue from the change, I've taken the next step of "react"-ifying the dashboard.
+
+On top of that, Nen and I have had various discussions on switching from Plotly to Chart JS for generating the graphs.
+One of the main issue in Plotly was the lack of support for customization (e.g. mouse cursor type, date & number formatting).
+Also I think Chart JS graphs look a lot more aesthetic ✨
+
+So now, I'm super excited to release the newly revamped dashboard with various new features and improvements!
+
+### What's new in v.0.6.0
+
+- **Sortable** Episode List & Commenter Countries List
+- Per Episode graph now opens **dialog** with more detailed information when its data point is clicked
+- Top words graph now supports **local filter** (instead of hardcoded filter in the backend)
+- **Subs Tab** for subscribers related information & graphs
+- **Date range filter** for time-series graphs (e.g. Daily graphs & Total graphs)
+- **Daily graphs** for each stats (e.g. views)
+- Click on the Indicator graph to **switch** between value and percentage change 
