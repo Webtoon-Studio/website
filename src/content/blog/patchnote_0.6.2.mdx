@@ -1,0 +1,27 @@
+---
+draft: false
+slug: "patch_0_6_2_Note"
+title: "Patch 0.6.2 Note"
+snippet: "Loading issue & Missing CSS file"
+
+publishDate: "2024-04-10 9:00"
+author: "Kyo"
+---
+
+## Hotfix
+
+There was a report that pointed me to a loading issue for data validation that was implemented on last patch.
+Main cause of the issue was the lack of check for the data loading state for the api endpoints that the data validation was checking.
+
+Additionally, the last patch removed few css files as a part of the code clean-up.
+However, one of the removed file was still in use for the bug report form.
+The file is added back, and some additional compiling issues have been addressed as well.
+
+### What's Changed in v.0.6.2
+
+#### Dashboard
+- The incorrect data validation is fixed
+
+#### Popup
+- The bug report form is fixed
+- The web site link url is fixed
