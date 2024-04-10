@@ -1,7 +1,7 @@
 ---
 draft: false
 name: "Kyo"
-title: "Front End Designer"
+title: "Frontend Engineer"
 avatar: {
     src: "https://unavatar.io/github/sanghunjlee",
     alt: "Kyo - Trashbunny"
