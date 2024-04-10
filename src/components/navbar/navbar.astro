@@ -2,6 +2,8 @@
 import Container from "@components/container.astro";
 import transflag from "assets/transflag.png";
 import rainbowflag from "assets/rainbowflag.png";
+import logoIcon from "assets/logo/logo.png";
+import logoTitle from "assets/logo/logo-title.png";
 import Link from "@components/ui/link.astro";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
@@ -27,28 +29,44 @@ const menuitems = [
   <header class="flex flex-col lg:flex-row justify-between items-center my-5">
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
-        <div class="flex w-full lg:w-auto items-center">
-          <a href="/" class="text-lg w-32 text-center gap-2 leading-3"
-            ><span class="font-bold text-ws-green-light">Creator</span>
-            <span class="text-ws-grey-light">Studio</span>
-            <span class="text-ws-green-light text-xs">for Webtoon</span>
+        <div class="flex w-full lg:w-auto items-center gap-4">
+          <a href="/" class="text-lg w-32 text-center gap-2 leading-3">
+            <div class="flex items-center">
+              <Picture 
+                src={logoIcon}
+                alt="Creator Studio Icon"
+                widths={[20, 40, 60]}
+                sizes="(max-width:2.8rem) 100vw, 2.8rem"
+                format="png"
+              />
+              <Picture 
+                src={logoTitle}
+                alt="Creator Studio"
+                widths={[40, 80, 120]}
+                sizes="(max-width:5.6rem) 100vw, 5.6rem"
+                format="png"
+              />
+            </div>
           </a>
-          <Picture
-            src={transflag}
-            alt="Transgender Pride Flag"
-            widths={[20, 40, 60]}
-            sizes="(max-width:2.8rem) 100vw, 2.8rem"
-            loading="eager"
-            format="png"
-          />
-          <Picture
-            src={rainbowflag}
-            alt="LGBT Rainbow Pride Flag"
-            widths={[20, 40, 60]}
-            sizes="(max-width:2.8rem) 100vw, 2.8rem"
-            loading="eager"
-            format="png"
-          />
+          <div class="flex items-center">
+            <Picture
+              src={transflag}
+              alt="Transgender Pride Flag"
+  
+              widths={[20, 40, 60]}
+              sizes="(max-width:2.8rem) 100vw, 2.8rem"
+              loading="eager"
+              format="png"
+            />
+            <Picture
+              src={rainbowflag}
+              alt="LGBT Rainbow Pride Flag"
+              widths={[20, 40, 60]}
+              sizes="(max-width:2.8rem) 100vw, 2.8rem"
+              loading="eager"
+              format="png"
+            />
+          </div>
         </div>
         <div class="block lg:hidden">
           <MenuIcon class="w-4 h-4 text-ws-grey-light" />
