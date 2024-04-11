@@ -9,7 +9,14 @@ import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 import { Picture } from "@astrojs/image/components";
 
-const menuitems = [
+type MenuItemType = {
+  title: string,
+  path: string,
+  // TODO: color?: string,
+  children?: MenuItemType[]
+}
+
+const menuitems: MenuItemType[] = [
   {
     title: "Patch Notes",
     path: "/patchnotes",
@@ -89,7 +96,11 @@ const menuitems = [
                   <li>
                     <a
                       href={item.path}
-                      class="flex lg:px-3 py-2 text-ws-grey-light hover:text-ws-grey-dark">
+                      class:list={[
+                        "flex lg:px-3 py-2 text-ws-grey-light",
+                        "hover:text-ws-green",
+                      ]}
+                    >
                       {item.title}
                     </a>
                   </li>
