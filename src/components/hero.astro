@@ -16,23 +16,39 @@ import { Icon } from "astro-icon";
     "text-ws-blue",
   ];
 
-  const defaultColour = colours[0];
+  let intervalId;
 
-  document.querySelectorAll("span.randomColour").forEach((el) => {
-    el.classList.add(defaultColour);
-    el.classList.add("font-bold");
-  });
+  const randomColourSpans = document.querySelectorAll("span.randomColour");
 
-  document.querySelectorAll("span.randomColour").forEach((el) => {
-    el.addEventListener("mouseover", colourRandomiser);
-  });
+  randomColourSpans.forEach((span) => {
+    span.classList.toggle("transition-colours", true);
+    span.classList.toggle("duration-500", true);
+    span.classList.toggle(colours[0], true);
+    span.addEventListener("mouseover", function() {
+      if (!intervalId) {
+        intervalId = setInterval(() => {
+          const match = /(text-ws-[a-zA-Z\-]+)/.exec(span.className);
+          const currColour = match ? match[1] : undefined;
+          const filtered = colours.filter(c => c !== currColour);
+          const newColour = filtered[Math.floor(Math.random() * filtered.length)];
 
-  function colourRandomiser() {
-    const randomColour = colours[Math.floor(Math.random() * colours.length)];
-    document.querySelectorAll("span.randomColour").forEach((el) => {
-      el.className = "randomColour font-bold " + randomColour;
+          document.querySelectorAll("span.randomColour").forEach((el) => {
+            if (currColour && el.classList.contains(currColour)) {
+              el.className = el.className.replace(currColour, newColour);
+            } else {
+              el.classList.add(newColour);
+            }
+          })
+        }, 800);
+      }
     });
-  }
+    span.addEventListener("mouseout", function() {
+      if (intervalId) {
+        clearInterval(intervalId);
+        intervalId = undefined;
+      }
+    })
+  });
   //assign random colour to elements in html with id randomColour
 </script>
 
