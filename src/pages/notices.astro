@@ -1,0 +1,58 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+
+// Filter notices with 'draft: false' & date before current date
+const publishedNotices = await getCollection("notices", ({ data }) => {
+  return !data.draft && data.publishDate < new Date();
+});
+
+// Sort content entries by publication date
+publishedNotices.sort(function (a, b) {
+  return b.data.publishDate.valueOf() - a.data.publishDate.valueOf();
+});
+---
+
+<Layout title="Notices">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Notices</Fragment>
+      <Fragment slot="desc"></Fragment>
+    </Sectionhead>
+    <main class="mt-16">
+      <ul class="grid gap-16 max-w-4xl mx-auto">
+        {
+          publishedNotices.map((notice, index) => (
+            <li>
+              <a href={`/notices/${notice.slug}`}>
+                <div class="grid md:grid-cols-1 gap-5 md:gap-10 items-center">
+                  <div>
+                    <h2 class="text-ws-grey-light text-3xl font-extrabold leading-snug tracking-tight mt-1 ">
+                      {notice.data.title}
+                    </h2>
+                    <p class="text-ws-grey-light text-sm leading-snug tracking-tight mt-1 ">
+                      {notice.data.snippet}
+                    </p>
+                    <div class="flex gap-2 mt-3">
+                      <span class="text-ws-grey">
+                        {notice.data.author}
+                      </span>
+                      <span class="text-ws-grey-dark">• </span>
+                      <time
+                        class="text-ws-grey"
+                        datetime={notice.data.publishDate.toISOString()}>
+                        {notice.data.publishDate.toDateString()}
+                      </time>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </main>
+  </Container>
+</Layout>

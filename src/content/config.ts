@@ -12,6 +12,16 @@ const blogCollection = defineCollection({
   }),
 });
 
+const noticeCollection = defineCollection({
+  schema: z.object({
+    draft: z.boolean(),
+    title: z.string(),
+    snippet: z.string(),
+    publishDate: z.string().transform(str => new Date(str)),
+    author: z.string().default('Creator Studio')
+  }),
+});
+
 const teamCollection = defineCollection({
   schema: z.object({
     draft: z.boolean(),
@@ -29,5 +39,6 @@ const teamCollection = defineCollection({
 //    This key should match your collection directory name in "src/content"
 export const collections = {
   'blog': blogCollection,
+  'notices': noticeCollection,
   'team': teamCollection,
 };

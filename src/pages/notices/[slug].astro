@@ -1,0 +1,72 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+
+// Generate a new path for every collection entry
+export async function getStaticPaths() {
+  const notices = await getCollection("notices");
+  return notices.filter((entry) => (
+    entry.data.draft === false
+  )).map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+// Get the entry directly from the prop on render
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<Layout title={entry.data.title}>
+  <Container>
+    <div class="mx-auto max-w-3xl mt-14">
+      <h1
+        class="text-center text-ws-grey text-4xl lg:text-5xl font-bold lg:tracking-tight mt-1 lg:leading-tight">
+        {entry.data.title}
+      </h1>
+      <div
+        class="justify-center flex gap-2 mt-3 items-center flex-wrap md:flex-nowrap">
+        <span class="text-gray-400">
+          {entry.data.author}
+        </span>
+        <span class="text-gray-400">•</span>
+        <time
+          class="text-gray-400"
+          datetime={entry.data.publishDate.toISOString()}>
+          {entry.data.publishDate.toDateString()}
+        </time>
+      </div>
+    </div>
+    <div
+      class="leading-tight mx-auto prose prose-invert prose-blockquote:p-4 prose-blockquote:my-4 prose-blockquote:border-s-4 prose-blockquote:border-ws-grey-300 prose-pre:max-w-2xl prose-lg mt-6 max-w-3xl">
+      <Content />
+    </div>
+    <div class="text-center mt-8">
+      <a
+        href="/notices"
+        class="bg-gray-100 px-5 py-3 rounded-md hover:bg-gray-200 transition"
+        >← Back to Notices</a
+      >
+    </div>
+  </Container>
+</Layout>
+
+<style>
+  
+      ol {
+        counter-reset: item;
+      }
+      li {
+        list-style-type: disc;
+        list-style-position: inside;
+        display: block;
+        text-indent: -1em;
+        padding-left: 1em;
+      }
+      li:before {
+        content: counters(item, ".") " ";
+        counter-increment: item;
+      }
+</style>
