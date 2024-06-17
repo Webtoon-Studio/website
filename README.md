@@ -1,14 +1,14 @@
-### Start development Server
+# Creator Studio Website
 
-```bash
-yarn dev
-```
+This is the codebase for the creator studio website, built with Astro, Tailwind and Sharp
+
 
 ### Preview & Build
 
 ```bash
-yarn preview
-yarn build
+npm run preview
+npm run build
+npm run dev
 ```
 
 ## Project Structure
