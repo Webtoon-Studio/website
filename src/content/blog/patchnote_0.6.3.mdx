@@ -1,0 +1,36 @@
+---
+draft: false
+slug: "patch_0_6_3_Note"
+title: "Patch 0.6.3 Note"
+snippet: "Updates & Null Value Error Fix"
+
+publishDate: "2024-06-17 8:00"
+author: "Kyo"
+---
+
+## Updates & Bug Fix
+
+It's been a while since the last patch, and I'm sorry for the delay in updates.
+The month of May was brutal for us as all of us started getting sick one after another.
+But we are all better now and back to the grind 💪
+
+Couple months ago, Webtoons changed their Comments API. This was a major setback for us (as well as other extensions such as Comment Wizard).
+It took us some time, but Rolo readjusted the wrapper around the new API. But with the new change, we realize that few data points were no longer available.
+One of the major change was the removal of the commenter's location data, which we used to create a cholopleth map of commenters.
+This update sadly has removed the map from the dashboard since it is no longer updated.
+
+To compensate for this, however, I've implemented a new component to list commenters by their comment count throughout the series!
+It may not be as cool or useful as the cholopleth map, but I hope that this list would allow you to see who is your biggest fan.
+
+### What's Changed in v.0.6.3
+
+#### Dashboard
+
+- `null` value errors have been fixed
+- Typo in the Monthly Trend graphs under Likes and Comments tab has been fixed
+- Comment Locations Map has been removed
+- A new Commenter List has been implemented
+
+#### Popup
+
+- User Guide & Report buttons have been moved into the Settings window
