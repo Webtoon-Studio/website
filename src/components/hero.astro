@@ -1,8 +1,8 @@
 ---
-import { Picture } from "@astrojs/image/components";
-import heroImage from "assets/hero-1.png";
+import { Picture } from "astro:assets";
+import heroImage from "@assets/hero-1.png";
 import Link from "@components/ui/link.astro";
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 ---
 
 <script>
@@ -45,7 +45,6 @@ Webtoon creators. -->
       src={heroImage}
       alt="Depressed Artist being yelled at by Spreadsheet"
       widths={[200, 400, 600]}
-      aspect={1.22641509434}
       sizes="(max-width: 600px) 100vw, 550px"
       loading="eager"
       format="avif"

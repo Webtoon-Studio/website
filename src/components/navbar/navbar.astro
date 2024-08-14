@@ -1,13 +1,19 @@
 ---
 import Container from "@components/container.astro";
-import transflag from "assets/transflag.png";
-import rainbowflag from "assets/rainbowflag.png";
+import transFlag from "@assets/transflag.svg";
+import rainbowflag from "@assets/rainbowflag.svg";
 import Link from "@components/ui/link.astro";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
-import { Picture } from "@astrojs/image/components";
+import { Picture } from "astro:assets";
 
-const menuitems = [
+interface MenuItem {
+  title: string;
+  path: string;
+  children?: MenuItem[];
+}
+
+const menuitems: MenuItem[] = [
   {
     title: "Notices",
     path: "/notices"
@@ -37,22 +43,23 @@ const menuitems = [
             <span class="text-ws-grey-light">Studio</span>
             <span class="text-ws-green-light text-xs">for Webtoon</span>
           </a>
+
           <Picture
-            src={transflag}
+            src={transFlag}
             alt="Transgender Pride Flag"
-            widths={[20, 40, 60]}
-            sizes="(max-width:2.8rem) 100vw, 2.8rem"
+            width="60"
             loading="eager"
-            format="png"
+            format="svg"
           />
+
           <Picture
             src={rainbowflag}
             alt="LGBT Rainbow Pride Flag"
-            widths={[20, 40, 60]}
-            sizes="(max-width:2.8rem) 100vw, 2.8rem"
+            width="60"
             loading="eager"
-            format="png"
+            format="svg"
           />
+
         </div>
         <div class="block lg:hidden">
           <MenuIcon class="w-4 h-4 text-ws-grey-light" />
