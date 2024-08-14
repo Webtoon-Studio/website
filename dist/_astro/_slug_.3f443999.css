@@ -1,1 +1,0 @@
-ol:where(.astro-4SN4ZG3R){counter-reset:item}li:where(.astro-4SN4ZG3R){list-style-type:disc;list-style-position:inside;display:block;text-indent:-1em;padding-left:1em}li:where(.astro-4SN4ZG3R):before{content:counters(item,".") " ";counter-increment:item}
